@@ -12,15 +12,15 @@ def main():
 
 
 def get_coords():
-    juuso = 0
+    mouse = 0
     while True:
 
         currentMouseX, currentMouseY = pyautogui.position()
 
-        if juuso != currentMouseX:
+        if mouse != currentMouseX:
             print(currentMouseX)
             print(currentMouseY)
-        juuso = currentMouseX
+        mouse = currentMouseX
 
 def choptrees():
 
