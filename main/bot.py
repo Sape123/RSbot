@@ -11,9 +11,8 @@ def main():
 
 
 
-
     while True:
-
+        logout()
         choptrees()
         droplogs()
 
@@ -55,16 +54,9 @@ def droplogs():
         print("no logs in inv")
 
 
-def webscrape():
-
-    url = "https://oldschoolrunescape.fandom.com/wiki/Burnt_chicken"
-    response = requests.get(url)
-    content = html.fromstring(response.content)
-    time.sleep(1)
-    pyautogui.write('noobsnoobsnoobs', interval=0.25)
-    pyautogui.press('enter')
-
-
+def logout():
+    minimap = pyautogui.screenshot('konsta.png', region=(3603, 62, 130, 120))
+    print(pyautogui.locateOnScreen('vihu.png', region=(3603, 62, 130, 120), confidence=1))
 
 
 main()
